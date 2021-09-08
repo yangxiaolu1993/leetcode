@@ -23,43 +23,7 @@ module.exports = {
         "@typescript-eslint"
     ],
     rules:{         
-        // 代码缩进
-        "vue/html-indent":["error",4,{
-            "attribute":1,
-            "baseIndent":1
-        }],
-        // 代码缩进
-        "vue/script-indent":["error",4,{
-            "baseIndent":0,
-            "switchCase":0,
-            "ignores":[]
-        }],
-        "vue/max-attributes-per-line": [2, {
-            "singleline": 10,
-            "multiline": {
-              "max": 1,
-              "allowFirstLine": false
-            }
-          }],
-          "vue/html-self-closing": ["error", {
-            "html": {
-              "void": "any",
-              "normal": "any",
-              "component": "any"
-            },
-            "svg": "any",
-            "math": "any"
-          }],
-          "vue/singleline-html-element-content-newline": "off",
-          'vue/no-parsing-error': [2, { "invalid-first-character-of-tag-name": false ,"x-invalid-end-tag":false}],
-          "vue/no-use-v-if-with-v-for": "off",
-          "vue/multiline-html-element-content-newline": "off",
-          "vue/name-property-casing": [0, "PascalCase"],
-          "vue/html-closing-bracket-newline": [0, {
-            "singleline": "never",
-            "multiline": "always"
-          }],
-          "vue/no-side-effects-in-computed-properties": 0,
+        
           'accessor-pairs': 2, //在对象中使用getter/setter
           'arrow-spacing': [2, {
             'before': true,
@@ -76,13 +40,13 @@ module.exports = {
           }],
           // 数组和对象键值对最后一个逗号， never参数：不能带末尾的逗号, always参数：必须带末尾的逗号，  
           // always-multiline：多行模式必须带逗号，单行模式不能带逗号  
-          'comma-dangle': [2, 'never'],
+          'comma-dangle': 1,
           // 控制逗号前后的空格
           'comma-spacing': [2, {
             'before': false,
             'after': true
           }],     
-          'eol-last': 2, // 文件末尾强制换行         
+          'eol-last': 1, // 文件末尾强制换行         
           'generator-star-spacing': 0, //生成器函数*的前后空格
           'handle-callback-err': 0, //nodejs 处理错误         
           // JSX 属性中一致使用双引号或单引号
@@ -190,10 +154,7 @@ module.exports = {
             }
           }], //换行时运算符在行尾还是行首
           'padded-blocks': 0, //块语句内行首行尾是否要空行
-          'quotes': [2, 'single', {
-            'avoidEscape': true,
-            'allowTemplateLiterals': true
-          }], //引号类型 `` "" ''
+          'quotes': 0, //引号类型 `` "" ''
           'semi': [2, 'never'], //语句强制分号结尾
           'semi-spacing': [2, {
             'before': false,

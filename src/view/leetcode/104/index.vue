@@ -10,19 +10,19 @@
 </template>
 <script>
 export default {
-  name: "LeetCode",
+  name: 'LeetCode',
   data() {
     return {
-      data: [],
-    };
+      data: []
+    }
   },
   mounted() {
-    let tree = [3,9,20,null,null,15,7]
+    const tree = [3, 9, 20, null, null, 15, 7]
   },
   methods: {
     
   }
-};
+}
 </script>
 
 <style lang="scss">
