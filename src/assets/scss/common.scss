@@ -1,0 +1,50 @@
+.home{
+    font-size: 28px;
+    color: #333;
+    background: rgba(246,246,246,1);
+    .home-title{
+        height: 100px;
+        line-height: 100px;
+        text-align: center;
+    }
+    .group{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        border-radius: 20px 20px 0 0;
+        overflow: hidden;
+        .group-list{
+            width: 100%;
+            padding: 16px 0 16px 20px;
+            display: flex;
+            padding-bottom: 20px;
+            background: #fff;
+            .img{
+                @include flex;
+                margin-right: 20px;
+                width: 160px;
+                height: 160px;
+                img{
+                    width: 120px;
+                    height: 120px;
+                    border-radius: 50%;
+                    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+                }
+            }
+
+            .content{
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                padding: 16px 0;
+                border-bottom: 1px solid rgba(240,243,243,1);
+                .title{
+                    margin-bottom: 16px;
+                }
+                .desc{
+                    @include moreline-ellipsis()
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,41 @@
+//主题色
+$primary-color: #f0250f;
+
+//渐变
+$gradient-color: linear-gradient(
+  135deg,
+  rgba(240, 22, 14, 1) 0%,
+  rgba(240, 37, 14, 1) 70%,
+  rgba(240, 78, 14, 1) 100%
+);
+
+//被选中的淡色背景
+$bg-color-selected: #fef4f3;
+
+//不能点击时背景
+$bg-color-disabled: #fcd4cf;
+
+//背景渐变
+$bg-gradient-color: $gradient-color;
+
+//白色背景
+$bg-color-white: #fff;
+
+//边框颜色
+$border-color: #ececec;
+
+//Font
+$font-size-1: 12px;
+$font-size-2: 13px;
+$font-size-3: 14px;
+$font-size-4: 15px;
+$font-size-5: 16px;
+$font-size-6: 18px;
+$font-size-7: 10px;
+
+//Color
+$primary-text-color: #333;
+$gray-text-color: #666;
+$disable-text-color: #999;
+$black-text-color: #000;
+$white-text-color: $bg-color-white;
