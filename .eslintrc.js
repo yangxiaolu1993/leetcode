@@ -25,15 +25,13 @@ module.exports = {
     rules:{         
         
           'accessor-pairs': 2, //在对象中使用getter/setter
-          'arrow-spacing': [2, {
+          'arrow-spacing': [1, {
             'before': true,
             'after': true
           }], //=>的前/后括号
-          'block-spacing': [2, 'always'], //块是否需要空格
+          'block-spacing': [1, 'always'], //块是否需要空格
           // if while function 后面的{必须与if在同一行，java风格。
-          'brace-style': [2, '1tbs', {
-            'allowSingleLine': true
-          }],
+          'brace-style': 0,
           //强制驼峰法命名
           'camelcase': [0, {
             'properties': 'always'
@@ -42,7 +40,7 @@ module.exports = {
           // always-multiline：多行模式必须带逗号，单行模式不能带逗号  
           'comma-dangle': 1,
           // 控制逗号前后的空格
-          'comma-spacing': [2, {
+          'comma-spacing': [1, {
             'before': false,
             'after': true
           }],     
@@ -52,11 +50,11 @@ module.exports = {
           // JSX 属性中一致使用双引号或单引号
           'jsx-quotes': [2, 'prefer-single'],
           //对象字面量中冒号的前后空格
-          'key-spacing': [2, {
+          'key-spacing': [1, {
             'beforeColon': false,
             'afterColon': true
           }],
-          'keyword-spacing': [2, {
+          'keyword-spacing': [1, {
             'before': true,
             'after': true
           }],
@@ -155,11 +153,8 @@ module.exports = {
           }], //换行时运算符在行尾还是行首
           'padded-blocks': 0, //块语句内行首行尾是否要空行
           'quotes': 0, //引号类型 `` "" ''
-          'semi': [2, 'never'], //语句强制分号结尾
-          'semi-spacing': [2, {
-            'before': false,
-            'after': true
-          }], //分号前后空格
+          'semi': 0, //语句强制分号结尾
+          'semi-spacing': 0, //分号前后空格
           'space-before-blocks': [2, 'always'], //不以新行开始的块{前面要不要有空格
           'space-before-function-paren': [2, 'never'], //函数定义时括号前面要不要有空格
           'space-in-parens': [2, 'never'], //小括号里面要不要有空格
@@ -175,7 +170,7 @@ module.exports = {
           'wrap-iife': [2, 'any'], //立即执行函数表达式的小括号风格
           'yield-star-spacing': 0,
           'yoda': [2, 'never'], //禁止尤达条件
-          'prefer-const': 2, //首选const
+          'prefer-const': 1, //首选const
           'no-debugger': 0, //禁止使用debugger
           'object-curly-spacing': [2, 'always', {
             objectsInObjects: false

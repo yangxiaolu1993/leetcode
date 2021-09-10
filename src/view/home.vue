@@ -33,17 +33,17 @@
 </template>
 
 <script>
-import LeetCodeList from "../../createLeetcode/config";
+import LeetCodeList from "../../createLeetcode/config"
 export default {
   name: "LeetCode",
   data() {
     return {
-      list: LeetCodeList,
-    };
+      list: LeetCodeList
+    }
   },
   mounted() {},
-  methods: {},
-};
+  methods: {}
+}
 </script>
 
 <style lang="scss" scoped>
