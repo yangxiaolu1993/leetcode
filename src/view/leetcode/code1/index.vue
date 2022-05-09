@@ -14,37 +14,63 @@ export default {
   data() {
     return {
       data: [],
-    }
+    };
   },
   mounted() {
-    let arr = ["something", "anything", "nothing", "anything"]
-    let index = arr.indexOf("nothing")
+    // let arr = ["something", "anything", "nothing", "anything"];
+    // let index = arr.indexOf("nothing");
     // console.log(index) //结果是2
-    console.log(this.solve3([3, 3], 6))
+    console.log(this.twoSum([-1,-2,-3,-4,-5], -8));
   },
   methods: {
+    /**
+     *
+     */
+    twoSum(nums, target) {
+      let res = [0, 0];
+
+      if (nums.length == 2) {
+        if (nums[0] + nums[1] == target) return [0,1];
+        return [];
+      }
+
+      for (let i=0; i < nums.length; i++) {
+        console.log('进去循环',nums[i])
+        // if (nums[i] > target) continue;
+        const remain = target - nums[i];
+        
+        const otherNums = nums.indexOf(remain) 
+        console.log(remain,otherNums)
+        if (otherNums > -1 && otherNums!=i) {
+          res[0] = i;
+          res[1] = nums.indexOf(remain);
+
+          return res
+        }
+      }
+    },
     /**
      * 方法一：
      * 哈希表（散列表）
      */
     solve(nums, target) {
-      let pi = 0
-      let pj = 1
+      let pi = 0;
+      let pj = 1;
 
       while (pi < nums.length) {
         if (nums[pi] + nums[pj] == target) {
-          return [pi, pj]
+          return [pi, pj];
         }
 
         if (pj < nums.length) {
-          pj += 1
+          pj += 1;
         } else {
-          pi += 1
-          pj = pi + 1
+          pi += 1;
+          pj = pi + 1;
         }
       }
 
-      return []
+      return [];
     },
 
     /**
@@ -52,21 +78,21 @@ export default {
      */
 
     solve2(nums, target) {
-      let map = new Map()
+      let map = new Map();
       for (let i = 0; i < nums.length; i++) {
-        let n = nums[i]
-        let n2 = target - n
+        let n = nums[i];
+        let n2 = target - n;
         if (map.has(n2)) {
-          return [map.get(n2), i]
+          return [map.get(n2), i];
         } else {
-          map.set(n, i)
+          map.set(n, i);
         }
       }
     },
   },
-}
+};
 </script>
 
 <style lang="scss">
-@import '@s/leetcode.scss'
+@import "@s/leetcode.scss";
 </style>
